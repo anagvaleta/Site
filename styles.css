@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+/* resetando o css */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+/* menu e logo */
+.navigation{
+    display: flex; /*jogar cada item um do lado do outro*/
+    align-items: center; /*alinhar ao meio*/
+    padding: 18px 40px; /*tamanho do menu*/
+    justify-content: space-between; /*dar espaço entre os itens*/
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    width: 100%; /*pegar 100% da tela */
+    background: #FFFF;
+    transition: all 0.5s;
+    position: fixed; 
+}
+.navigation .logo{
+    color: #FAB4BF;
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.navigation ul{ /*arrumar a lista com display flex*/
+    display: flex;
+    align-items: center;
+    gap: 5rem; 
+}
+
+.navigation ul li a{
+    color: #3b3b3b;
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+.navigation ul li a:hover{
+    color: #FAB4BF;
+}
+.navigation i{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.menu{
+    cursor: pointer;
+    display: none;
+}
+
+section{
+    min-height: 100vh;
+    padding: 5rem 9% 5rem;
+}
+
+.home{
+    display: flex;
+    padding-bottom: 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    background-color: white;
+    animation: fadeIn 0.6s ease-in;
+}
+
+.home .home-content h1{
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+span{
+    color: #89C2D9;
+    transition: all 0.5s;
+    font-weight: 700;
+}
+
+span:hover{
+    color: #F28DB2;
+}
+
+.home-content h3{
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.home-content p{
+    font-size: 1.6rem;
+}
+
+.home-img{
+    border-radius: 50%;
+    cursor: arrow;
+}
+
+.home-img img{
+    position: static;
+    width: 23vw;
+    border-radius: 50%;
+    transition: 0.2s linear;
+}
+  
+.social-icons a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 4rem;
+    height: 4rem;
+    background-color: transparent;
+    border: 0.2rem solid #89C2D9;
+    font-size: 2rem;
+    border-radius: 50%;
+    margin: 3rem 1.5rem 3rem 0;
+    transition: 0.3s ease;
+    color: #89C2D9;
+}
+
+.social-icons a:hover{
+    color: white;
+    /*efeito zoom*/
+    transform: scale(1.3) translateY(-5px);
+    /*------*/
+    background-color: #89C2D9;
+    box-shadow: 0  0 25px #89C2D9;
+}
+
+.btn{
+    display: inline-block;
+    padding: 1rem 2.8rem;
+    background-color: white;
+    border-radius: 4rem;
+    font-size: 1.6rem;
+    color: #D96690;
+    letter-spacing: 0.3rem;
+    font-weight: 600;
+    border: 2px solid #D96690;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover{
+    transform: scale3d(1.03);
+    background-color: #D96690;
+    color: white;
+    box-shadow: 0 0 25px #D96690;
+}
+
+.typing-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.typing-text span{
+    position: relative;
+}
+
+.typing-text span::before{
+    content: "Engenheira de Software";
+    color: #D96690;
+    animation: words 20s infinite;
+}
+
+.typing-text span::after{
+    content: "";
+    background-color: white;
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    border-left: 3px solid white;
+    right: -8;
+    animation: cursor 0.6s infinite;
+}
+
+@keyframes cursor{
+    to{
+        border-left: 3px solid #b74b4b;
+    }
+}
+
+@keyframes words{
+    0%, 20%{
+        content: "Web Developer";
+    }
+    21%, 40%{
+        content: "Estudante";
+    }
+    41%, 60%{
+        content: "Designer";
+    }
+    61%, 80%{
+        content: "Programadora";
+    }
+    81%, 100%{
+        content: "Futura Engenheira";
+    }
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.titulo-sobre h1 {
+    margin: 0.1rem;
+    font-size: 3rem;
+    color: #F2B263;
+    text-align: center;
+}
+
+.timeline {
+    margin: 5em auto;
+    max-width: 34.15em;
+}
+
+.checkpoint {
+    max-width: 34em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: relative;
+}
+
+.checkpoint div {
+    border: 2px solid #D96690;
+    border-radius: 1em;
+    padding: 1.5em;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.6s ease-in;
+}
+
+.checkpoint p {
+    line-height: 27px;
+    color: #1d1d1d;
+}
+
+.checkpoint h2 {
+    margin-bottom: 0.4rem;
+    color: #89C2D9;
+    font-weight: 700;
+}
+
+.checkpoint h3 {
+    font-weight: 300;
+    font-size: 15px;
+    color: #F28DB2;
+}
+.checkpoint:nth-child(odd){
+    border-left: 3px solid #89C2D9;
+    padding-left: 3em;
+    transform: translateX(17em);
+}
+
+.checkpoint:nth-child(even) {
+    border-right: 3px solid #89C2D9;
+    padding-right: 3em;
+    transform: translateX(-16.87em);
+}
+
+.checkpoint:nth-child(odd)::before,
+.checkpoint:nth-child(even)::before{
+    content: '';
+    background: #89C2D9;
+    width: 3em;
+    height: 3px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.checkpoint:nth-child(odd)::before{
+    left: 0;
+}
+
+.checkpoint:nth-child(even)::before{
+    right: 0;
+}
+
+.checkpoint:nth-child(odd) div::before,
+.checkpoint:nth-child(even) div::before {
+    content: '';
+    background: #D96690;
+    width: 0.8em;
+    height: 0.8em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
+.checkpoint:nth-child(odd) div::before{
+    left: -0.5em;
+}
+
+.checkpoint:nth-child(even) div::before{
+    right: -0.5em;
+}
+
+.titulo-projetos h1 {
+    color: #828C65;
+    margin-bottom: 40px;
+}
+
+.projetos .titulo-projetos {
+    text-align: center;
+    font-size: 3rem;
+    margin: 0.1rem;
+}
+
+.cards {
+    margin-bottom: 2em;
+}
+
+.cards .container {
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-gap: 2em;
+}
+
+.cards img {
+    width: 100%;
+    border-radius: 2.5em;
+    margin-top: -4em;
+    transition: 0.3s;
+    border: 0.2rem solid #F28F38;
+}
+
+.card {
+    padding: 2em;
+    border-radius: 2.5em;
+    border: 0.2rem solid #d8ced0;
+}
+
+.texto-card {
+    margin: 1.5em 1em 0 1em;
+}
+
+.texto-card h1 {
+    color: #F28599;
+    line-height: -1.8px;
+    padding-bottom: 15px;
+}
+
+.texto-card p {
+    color: #7c7c7c;
+    padding-bottom: 10px;
+}
+
+.card:hover img {
+    transform: translateY(-2em);
+}
+
+.texto-card a {
+    color: #F28F38;
+}
+
+.skills .skills-titulo h1 {
+    color: #00CCBF;
+    margin-bottom: 40px;
+}
+
+.skills .skills-titulo p {
+    color: #525252;
+    font-size: 25px;
+    margin-bottom: 30px;
+    margin-top: -40px;
+}
+
+.skills .skills-titulo {
+    text-align: center;
+    font-size: 3rem;
+    margin: 0.1rem;
+}
+
+.skills .skill-cards {
+    padding: 2em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    grid-gap: 2em;
+}
+
+.skill-container .skill-total{
+    border: 0.2rem solid #d8ced0;
+    padding: 2em;
+    border-radius: 2.5em;
+    transition: 0.3s ease;
+}
+
+.skill-container .skill-total:hover{
+    border: 0.2rem solid #F28F38;
+    padding: 2em;
+    border-radius: 2.5em;
+}
+
+.skill-total h1 {
+    color: #FF5F5D;
+    margin-bottom: 40px;
+}
+
+.stars {
+    margin-top: 30px;
+    color: #00CCBF;
+}
+
+.contato .contato-titulo {
+    text-align: center;
+    font-size: 3rem;
+    margin: 0.1rem;
+}
+
+.contato .contato-titulo h1 {
+    color: #5A278C;
+    margin-bottom: 40px;
+}
+
+.infos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+
+.infos i {
+    color: #D96690;
+}
+
+.infos .infos-1 {
+    border: 0.2rem solid #d8ced0;
+    padding: 2em;
+    margin: 2px;
+    border-radius: 2.5em;
+    transition: 0.3s ease;
+}
+
+.infos .infos-1:hover {
+    border: 0.2rem solid #00CCBF;
+    padding: 2em;
+    margin: 2px;
+    border-radius: 2.5em;
+    transition: 0.3s ease;
+}
+
+.footer{
+    display: flex; /*jogar cada item um do lado do outro*/
+    align-items: center; /*alinhar ao meio*/
+    justify-content: center;
+    box-shadow: 0 0.1rem 0.5rem #ccc;
+    color: #D96690;
+    font-size: 10px;
+    max-width: 100%;
+    padding: 5px;
+}
+
+.footer h1 {
+    font-weight: 300;
+}
